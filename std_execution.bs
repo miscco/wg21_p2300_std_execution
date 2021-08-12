@@ -1784,8 +1784,7 @@ namespace std::execution {
     <pre highlight=c++>
     template&lt;class S>
       concept scheduler =
-        copy_constructible&lt;remove_cvref_t&lt;S>> &&
-        equality_comparable&lt;remove_cvref_t&lt;S>> &&
+        moveable-value&lt;S> &&
         requires(S&& s) {
           execution::schedule((S&&)s);
         };
@@ -1848,8 +1847,7 @@ enum class forward_progress_guarantee {
     <pre highlight=c++>
     template&lt;class T, class E = exception_ptr>
     concept receiver =
-      move_constructible&lt;remove_cvref_t&lt;T>> &&
-      constructible_from&lt;remove_cvref_t&lt;T>, T> &&
+      moveable-value&lt;T> &&
       requires(remove_cvref_t&lt;T>&& t, E&& e) {
         { execution::set_done(std::move(t)) } noexcept;
         { execution::set_error(std::move(t), (E&&) e) } noexcept;
