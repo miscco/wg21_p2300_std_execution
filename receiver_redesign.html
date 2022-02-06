@@ -3393,7 +3393,7 @@ instantiated.]</p>
 </pre>
     <ol>
      <li data-md>
-      <p>Let <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>VALUE</c-></code> be the expression <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>move</c-><c- p>(</c-><c- n>self</c-><c- p>).</c-><c- n>set_value</c-><c- p>(</c-><c- n>std</c-><c- o>::</c-><c- n>forward</c-><c- o>&lt;</c-><c- n>As</c-><c- o>></c-><c- p>(</c-><c- n>as</c-><c- p>)...)</c-></code>.</p>
+      <p>Let <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>VALUE</c-></code> be the expression <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>move</c-><c- p>(</c-><c- n>self</c-><c- p>).</c-><c- n>set_value</c-><c- p>(</c-><c- n>std</c-><c- o>::</c-><c- n>forward</c-><c- o>&amp;</c-><c- n>ltAs</c-><c- o>></c-><c- p>(</c-><c- n>as</c-><c- p>)...)</c-></code>.</p>
      <li data-md>
       <p><i>Constraints:</i> Either <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>VALUE</c-></code> is a valid expression or <code class="highlight"><c- k>typename</c-> <c- nc>Derived</c-><c- o>::</c-><c- n>set_value</c-></code> denotes a type and <code class="highlight"><i><c- n>callable</c-></i><c- o>&lt;</c-><c- n>set_value_t</c-><c- p>,</c-> <i><c- n>BASE</c-><c- o>-</c-><c- n>TYPE</c-></i><c- p>(</c-><c- n>Derived</c-><c- p>),</c-> <c- n>As</c-><c- p>...</c-><c- o>></c-></code> is <code class="highlight">true</code>.</p>
      <li data-md>
@@ -3412,7 +3412,7 @@ instantiated.]</p>
 </pre>
     <ol>
      <li data-md>
-      <p>Let <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>ERROR</c-></code> be the expression <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>move</c-><c- p>(</c-><c- n>self</c-><c- p>).</c-><c- n>set_error</c-><c- p>(</c-><c- n>std</c-><c- o>::</c-><c- n>forward</c-><c- o>&lt;</c-><c- n>E</c-><c- o>></c-><c- p>(</c-><c- n>e</c-><c- p>))</c-></code>.</p>
+      <p>Let <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>ERROR</c-></code> be the expression <code class="highlight"><c- n>std</c-><c- o>::</c-><c- n>move</c-><c- p>(</c-><c- n>self</c-><c- p>).</c-><c- n>set_error</c-><c- p>(</c-><c- n>std</c-><c- o>::</c-><c- n>forward</c-><c- o>&amp;</c-><c- n>ltE</c-><c- o>></c-><c- p>(</c-><c- n>e</c-><c- p>))</c-></code>.</p>
      <li data-md>
       <p><i>Constraints:</i> Either <code class="highlight"><c- n>SET</c-><c- o>-</c-><c- n>ERROR</c-></code> is a valid expression or <code class="highlight"><c- k>typename</c-> <c- nc>Derived</c-><c- o>::</c-><c- n>set_error</c-></code> denotes a type and <code class="highlight"><i><c- n>callable</c-></i><c- o>&lt;</c-><c- n>set_error_t</c-><c- p>,</c-> <i><c- n>BASE</c-><c- o>-</c-><c- n>TYPE</c-></i><c- p>(</c-><c- n>Derived</c-><c- p>),</c-> <c- n>E</c-><c- o>></c-></code> is <code class="highlight">true</code>.</p>
      <li data-md>
